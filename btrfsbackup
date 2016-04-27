@@ -89,7 +89,7 @@ case "$COMMAND" in
     $DEBUG btrfs subvolume create $BASE/backup
     $DEBUG mkdir $BASE/snapshots
     # setup default lesser backup
-    if ! -e /.rsync-filter then
+    if ! -e /.rsync-filter ; then
         echo "+ /home/" > /.rsync-filter
         echo "+ /var/***" >> /.rsync-filter
         echo "+ /etc/***" >> /.rsync-filter
