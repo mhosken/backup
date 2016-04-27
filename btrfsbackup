@@ -59,7 +59,6 @@ done
 
 MOUNT=/media/$UNAME/$DRIVENAME
 BASE=$MOUNT/$SUBVOL
-#BASE=$MOUNT/mh
 
 DEBUG=
 #DEBUG=echo
