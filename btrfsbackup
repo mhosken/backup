@@ -89,7 +89,8 @@ case "$COMMAND" in
     shift
     DEV="$1"
     if [ -z "$DEV" ]; then
-        echo "Please specify the drive device: e.g. btrfsbackup [opts] new /dev/sdc"
+        echo "Please specify the drive device: e.g. btrfsbackup [opts] new /dev/sdc. Here is a list:"
+        udisksctl status
         exit 0
     fi
     $DEBUG parted -s -a optimal -- $DEV mklabel gpt mkpart primary 0 4GB mkpart primary 4GB -1c || exit 1
